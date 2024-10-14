@@ -1,22 +1,9 @@
 import { useState } from "react";
-import "./Cadastro.css";
+import "./App.css";
+import { AppRoutes } from "./AppRoutes";
 
 function App() {
-  return (
-    <div className="container">
-      <div className="header">
-        <header>
-          <button> UM </button>
-          <button> DOIS </button>
-          <button> TRES </button>
-        </header>
-      </div>
-
-      <div className="card">
-        <h1>ola mundo</h1>
-      </div>
-    </div>
-  );
+  return <AppRoutes />;
 }
 
-export default Cadastro;
+export default App;
