@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  background-color: #e6e0e9;
+  padding: 10px;
+
+  & button {
+    margin-left: 10px;
+    font-weight: bold;
+    border: 0cap;
+  }
+
+  & button:hover {
+    opacity: 0.8;
+  }
+}
+
+.card {
+  display: flex;
+
+  background-color: #e6e0e9;
+}
