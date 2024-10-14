@@ -1,6 +1,5 @@
 header {
   display: flex;
-  align-items: center;
   background-color: #e6e0e9;
   padding: 10px;
 
@@ -13,4 +12,10 @@ header {
   & button:hover {
     opacity: 0.8;
   }
+}
+
+.card {
+  display: flex;
+
+  background-color: #e6e0e9;
 }
