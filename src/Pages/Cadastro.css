@@ -1,4 +1,4 @@
-/* Background geral */
+
 .background {
   display: flex;
   justify-content: center;
@@ -7,7 +7,7 @@
   background: #AFAFAF;
 }
 
-/* Área de login */
+
 .background-login {
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* Título da tela */
+
 .titulo {
   font-family: 'Roboto', sans-serif;
   font-size: 32px;
@@ -29,7 +29,7 @@
   margin-bottom: 40px;
 }
 
-/* Inputs do formulário */
+
 .text-inputs {
   width: 100%;
   display: flex;
@@ -62,7 +62,7 @@
   box-sizing: border-box;
 }
 
-/* Botão Cadastrar */
+
 .cadastrar {
 
   width: 80%;
