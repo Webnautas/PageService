@@ -14,8 +14,26 @@ header {
   }
 }
 
+footer {
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  background-color: #e6e0e9;
+}
 .card {
   display: flex;
-
+  height: 200vh;
   background-color: #e6e0e9;
+  margin: 10px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+
+  & li {
+    padding: 10px;
+    font-style: normal;
+    text-decoration: none;
+  }
 }
