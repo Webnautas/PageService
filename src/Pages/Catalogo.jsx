@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./Catalogo.css";
 import Produto from "../Componentes/Produto";
 import ShopCart from "../assets/ShopCart.svg";
-
 import search from "../assets/search.svg";
 
 export function Catalogo() {
@@ -27,12 +26,17 @@ export function Catalogo() {
         <div className="card">
           <Produto />
           <Produto />
+
           <Produto />
+
           <Produto />
+
+          <Produto />
+
           <Produto />
         </div>
       </body>
-      <footer>teste</footer>
+      <div className="footer">teste</div>
     </div>
   );
 }

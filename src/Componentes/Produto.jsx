@@ -12,7 +12,7 @@ export default function Produto() {
         <p className="Desc">Queijo Mussarela, pepperoni, Azeitonas.</p>
       </span>
       <div className="child2">
-        <p>00,00$</p>
+        <p>R$00,00</p>
         <button>Adicionar</button>
       </div>
     </div>
