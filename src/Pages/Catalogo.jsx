@@ -8,7 +8,7 @@ import search from "../assets/search.svg";
 export function Catalogo() {
   return (
     <div className="container">
-      <div className="cabeça">
+      <div className="head">
         <header>
           <ul>
             <li>

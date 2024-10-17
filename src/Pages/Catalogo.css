@@ -1,8 +1,12 @@
+.head {
+  position: sticky;
+  top: 0px;
+}
+
 header {
   display: flex;
   background-color: #e6e0e9;
   padding: 10px;
-  position: sticky;
 
   & button {
     margin-left: 10px;
