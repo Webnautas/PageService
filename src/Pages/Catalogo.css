@@ -2,6 +2,7 @@ header {
   display: flex;
   background-color: #e6e0e9;
   padding: 10px;
+  position: sticky;
 
   & button {
     margin-left: 10px;
@@ -15,25 +16,28 @@ header {
 }
 
 footer {
-  display: flex;
   width: 100%;
   bottom: 0;
   background-color: #e6e0e9;
 }
 .card {
-  display: flex;
-  height: 200vh;
-  background-color: #e6e0e9;
-  margin: 10px;
+  border-radius: 25px;
+  background-color: #d9d9d9;
+  padding: 10px;
+  margin: 50px;
 }
 
 ul {
   display: flex;
-  list-style-type: none;
+  justify-content: space-between;
+  width: 100%;
 
   & li {
     padding: 10px;
     font-style: normal;
-    text-decoration: none;
+    list-style-type: none;
   }
+}
+img {
+  width: 32px;
 }

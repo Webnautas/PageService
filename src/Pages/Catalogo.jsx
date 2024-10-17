@@ -1,27 +1,38 @@
 import { useState } from "react";
 import "./Catalogo.css";
 import Produto from "../Componentes/Produto";
+import ShopCart from "../assets/ShopCart.svg";
+
+import search from "../assets/search.svg";
 
 export function Catalogo() {
   return (
     <div className="container">
-      <div className="header">
+      <div className="cabeça">
         <header>
           <ul>
             <li>
-              <a href="/catalogo">CATALOGO</a>
+              <img src={search}></img>
             </li>
+            <li>Pizzas Salgadas</li>
+            <li>Pizzas Doces</li>
+            <li>Bebidas</li>
             <li>
-              <a href="/cadastro">CADASTRO</a>
+              <img className="cart" src={ShopCart}></img>
             </li>
           </ul>
         </header>
       </div>
-
-      <div className="card">
-        <Produto />
-      </div>
-      <footer> teste</footer>
+      <body>
+        <div className="card">
+          <Produto />
+          <Produto />
+          <Produto />
+          <Produto />
+          <Produto />
+        </div>
+      </body>
+      <footer>teste</footer>
     </div>
   );
 }
