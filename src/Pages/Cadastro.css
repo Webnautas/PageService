@@ -1,11 +1,9 @@
-
 .background {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-
 
 .background-login {
   display: flex;
@@ -14,20 +12,18 @@
   align-items: center;
   width: 350px;
   height: 530px;
-  background: #E6E0E9;
+  background: #e6e0e9;
   border-radius: 25px;
   padding: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-
 .titulo {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 32px;
   color: #000;
   margin-bottom: 40px;
 }
-
 
 .text-inputs {
   width: 100%;
@@ -43,16 +39,15 @@
 }
 
 .label-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   margin-bottom: 8px;
-  
 }
 
 .input-text {
   width: 100%;
   padding: 12px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   background-color: transparent;
   border: 0px solid #ccc;
@@ -61,9 +56,7 @@
   box-sizing: border-box;
 }
 
-
 .cadastrar {
-
   width: 80%;
   margin-top: 30px;
 }
@@ -72,7 +65,7 @@
   margin-top: 20px;
   width: 100%;
   padding: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #fff;
   background-color: #000;
