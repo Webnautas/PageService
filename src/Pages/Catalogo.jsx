@@ -21,12 +21,6 @@ export function Catalogo() {
             <Produto />
             <Produto />
             <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
-            <Produto />
           </div>
         </div>
       </main>
