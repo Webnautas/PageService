@@ -19,6 +19,14 @@ export function Catalogo() {
         <div className="card">
           <div className="produto">
             <Produto />
+            <Produto />
+            <Produto />
+            <Produto />
+            <Produto />
+            <Produto />
+            <Produto />
+            <Produto />
+            <Produto />
           </div>
         </div>
       </main>

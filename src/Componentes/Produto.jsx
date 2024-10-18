@@ -8,11 +8,11 @@ export default function Produto() {
 
       <span className="child">
         <h2>Pizzas</h2>
-        <h1>Pepperoni</h1>
-        <p>Queijo Mussarela, pepperoni, Azeitonas.</p>
+        <h1>ROberto</h1>
+        <p>Queijo Muçarela, calabresa e Azeitonas.</p>
       </span>
       <div className="child2">
-        <p>R$00,00</p>
+        <p>R$40,00</p>
         <button>Adicionar</button>
       </div>
     </div>
