@@ -34,9 +34,6 @@
   font-size: 2vh;
   font-weight: bold;
 
-  & p {
-  }
-
   & button {
     width: 100%;
     border: none;

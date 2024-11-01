@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"; // Importar useEffect
 import "./Pedido.css";
+import { pizza } from "../Componentes/data";
 
 export function Pedido() {
   // Estado para armazenar os dados dos itens do pedido
@@ -12,11 +13,11 @@ export function Pedido() {
     const fetchData = async () => {
       const dadosDoBackEnd = {
         itens: [
-          { nome: 'Item 1', preco: 10.00 },
-          { nome: 'Item 2', preco: 20.00 },
-          { nome: 'Item 3', preco: 15.00 },
+          { nome: "Item 1", preco: 10.0 },
+          { nome: "Item 2", preco: 20.0 },
+          { nome: "Item 3", preco: 15.0 },
         ],
-        total: 45.00,
+        total: 45.0,
       };
 
       // Atualizando o estado com os dados recebidos
@@ -29,19 +30,24 @@ export function Pedido() {
 
   return (
     <div className="pedido-container">
-      <p className="payment-info">Está quase pronto =) Realize seu pagamento!</p>
-      
+      <p className="payment-info">
+        Está quase pronto =) Realize seu pagamento!
+      </p>
+
       <div className="pix-title">PIX COPIA E COLA</div>
-      <div className="retangulo1"><div className="pix-code">
-        00020126360014BR.GOV.BCB.PIX0114+55999999999950200000BR5204000053039865405100.005802BR5914Nome do Recebedor6010Nome do Banco62160512ABC123456789630489E7
+      <div className="retangulo1">
+        <div className="pix-code">
+          00020126360014BR.GOV.BCB.PIX0114+55999999999950200000BR5204000053039865405100.005802BR5914Nome
+          do Recebedor6010Nome do Banco62160512ABC123456789630489E7
+        </div>
       </div>
+
+      <div className="order-info">
+        Informe o seu número de pedido no caixa :)
       </div>
-      
-      <div className="order-info">Informe o seu número de pedido no caixa :)</div>
       <div className="retangulo2">
-      <div className="order-number">#123456</div>
+        <div className="order-number">#123456</div>
       </div>
-      
 
       <div className="itens-pedido">
         <h2>Itens do Pedido</h2>
