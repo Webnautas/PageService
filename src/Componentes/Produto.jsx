@@ -15,7 +15,7 @@ export default function Produto({ onAddToCart }) {
         <p>{items.description}</p>
       </span>
       <div className="child2">
-        <p>{items.price} R$</p>
+        <p>R$ {items.price.toFixed(2)} </p>
         <button onClick={onAddToCart}>Adicionar</button>
       </div>
     </div>

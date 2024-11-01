@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Pages/Catalogo.css";
 
 const Cart = ({ cartItems }) => {
@@ -9,10 +9,10 @@ const Cart = ({ cartItems }) => {
       </header>
       <main className="cart-main">
         {cartItems.length > 0 ? (
-          cartItems.map((item, index) => (
+          cartItems.map((items, index) => (
             <div key={index} className="card">
-              <img src={item.image} alt={item.name} className="imgcart" />
-              <h2>{item.name}</h2>
+              <img src={items.image} alt={items.name} className="imgcart" />
+              <h2>{items.name}</h2>
               <p>Quantidade: {item.quantity}</p>
               <p>Preço: R${item.price}</p>
             </div>

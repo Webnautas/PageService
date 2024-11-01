@@ -19,7 +19,7 @@ export const pizza = [
   },
   {
     id: 3,
-    name: "Chocodeiro",
+    name: "Chocobo",
     description: "chocolate de brigadeiro",
     price: 40.0,
   },
@@ -27,6 +27,12 @@ export const pizza = [
     id: 4,
     name: "Banana Nevada",
     description: "Banana, coco e leite condensado",
+    price: 40.0,
+  },
+  {
+    id: 5,
+    name: "Frango philadelfia 4 queijo",
+    description: "É frango e queijo",
     price: 40.0,
   },
 ];
