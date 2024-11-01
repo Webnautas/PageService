@@ -1,11 +1,11 @@
 .bodycard {
   display: grid;
   background-color: #ece6f0;
-  grid-template-columns: 0.5fr 2fr 0.5fr; 
+  grid-template-columns: 0.5fr 2fr 0.5fr;
   grid-gap: 1%;
   border-radius: 2vw;
   margin: 1vh;
-  padding: 1vh; 
+  padding: 1vh;
   & img {
     display: flex;
     justify-content: center;
@@ -19,9 +19,9 @@
   display: flex;
   flex-direction: column;
   font-size: 2vh;
-  width: 100%; 
-  align-items: flex-start; 
-  
+  width: 100%;
+  align-items: flex-start;
+
   & p {
     opacity: 0.8;
   }
@@ -34,10 +34,10 @@
   flex-direction: column;
   font-size: 2vh;
   font-weight: bold;
-  width: 100%; 
+  width: 100%;
 
   & button {
-    width: 100%; 
+    width: 100%;
     border: none;
     border-radius: 25vw;
     color: #fff;
@@ -58,7 +58,8 @@
     text-align: center;
   }
 
-  .child, .child2 {
+  .child,
+  .child2 {
     font-size: 3vh;
   }
 }

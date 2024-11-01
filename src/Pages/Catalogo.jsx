@@ -7,7 +7,7 @@ import search from "../assets/search.svg";
 
 export function Catalogo() {
   const [cartCount, setCartCount] = useState(0);
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleAddToCart = () => {
     setCartCount(cartCount + 1);
@@ -20,8 +20,10 @@ export function Catalogo() {
           <img className="imgsearch" src={search} alt="search" />
           <p>Pizzas</p>
           <p>Bebidas</p>
-          
-          <div className="cart-container" onClick={() => navigate('/cart')}> {/* Navegação para a página do carrinho */}
+
+          <div className="cart-container" onClick={() => navigate("/cart")}>
+            {" "}
+            {/* Navegação para a página do carrinho */}
             <img className="imgcart" src={ShopCart} alt="cart" />
             <div className="cart-count">{cartCount}</div>
           </div>
@@ -30,9 +32,6 @@ export function Catalogo() {
       <main>
         <div className="card">
           <div className="produto">
-            
-            <Produto onAddToCart={handleAddToCart} />
-            <Produto onAddToCart={handleAddToCart} />
             <Produto onAddToCart={handleAddToCart} />
           </div>
         </div>
