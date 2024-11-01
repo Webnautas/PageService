@@ -1,7 +1,15 @@
 import { useState } from "react";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
+  const navigate = useNavigate();
+
+  function handleClick(event) {
+    navigate("/cadastro");
+    console.log("Ola mundo");
+  }
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -84,7 +92,9 @@ export function Login() {
           Entrar com o Google
         </button>
 
-        <button className="register-button">Cadastrar</button>
+        <button className="register-button" type="button" onClick={handleClick}>
+          Cadastrar
+        </button>
 
         <div className="social-icons">
           <button className="social-button">

@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react"; // Importar useEffect
 import "./Pedido.css";
-import { pizza } from "../Componentes/data";
 
 export function Pedido() {
   // Estado para armazenar os dados dos itens do pedido
   const [itensPedido, setItensPedido] = useState([]);
   const [total, setTotal] = useState(0);
-
   // Simulando a requisição ao back-end
   useEffect(() => {
     // Simulação de dados do back-end
