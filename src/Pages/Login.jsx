@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
+import { GoogleLogin } from "@react-oauth/google";
 
 export function Login() {
   const navigate = useNavigate();
@@ -88,8 +89,15 @@ export function Login() {
         <div className="ou-section">ou</div>
 
         <button className="google-login">
-          <img src="/src/assets/300221.png" alt="Google" />
-          Entrar com o Google
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              console.log(credentialResponse);
+            }}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+          />
+          ;
         </button>
 
         <button className="register-button" type="button" onClick={handleClick}>

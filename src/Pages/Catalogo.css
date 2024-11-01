@@ -9,7 +9,6 @@
   flex-direction: column;
   min-height: 100vh;
   max-width: 100%;
-  
 }
 
 a {
@@ -62,7 +61,6 @@ main {
 }
 
 .card {
-  
   margin: 0 6vh 0 2vh;
   padding: 2vh;
   background-color: var(--cinza2);
