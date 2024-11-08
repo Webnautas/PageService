@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Para navegação
+import { useState } from "react"; 
 import "./Catalogo.css";
 import Produto from "../Componentes/Produto";
 import ShopCart from "../assets/ShopCart.svg";
@@ -7,11 +6,26 @@ import search from "../assets/search.svg";
 
 export function Catalogo() {
   const [cartCount, setCartCount] = useState(0);
-  const navigate = useNavigate();
+  const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (item) => {
+    setCartItems([...cartItems, item]);
     setCartCount(cartCount + 1);
   };
+
+  const handleRemoveFromCart = (index) => {
+    const updatedCartItems = [...cartItems];
+    updatedCartItems.splice(index, 1);
+    setCartItems(updatedCartItems);
+    setCartCount(cartCount - 1);
+  };
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
+  const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
 
   return (
     <div className="container">
@@ -20,10 +34,7 @@ export function Catalogo() {
           <img className="imgsearch" src={search} alt="search" />
           <p>Pizzas</p>
           <p>Bebidas</p>
-
-          <div className="cart-container" onClick={() => navigate("/cart")}>
-            {" "}
-            {/* Navegação para a página do carrinho */}
+          <div className="cart-container" onClick={toggleCart}>
             <img className="imgcart" src={ShopCart} alt="cart" />
             <div className="cart-count">{cartCount}</div>
           </div>
@@ -51,6 +62,31 @@ export function Catalogo() {
           </div>
         </div>
       </footer>
+      {isCartOpen && (
+        <div className="modal">
+          <div className="modal-content">
+            <h2>Carrinho</h2>
+            <button onClick={toggleCart} className="close-modal">X</button>
+            {cartItems.length === 0 ? (
+              <p>Seu carrinho está vazio.</p>
+            ) : (
+              <>
+                <ul className="cart-list">
+                  {cartItems.map((item, index) => (
+                    <li key={index} className="cart-item">
+                      {item.name} - R$ {item.price.toFixed(2)}
+                      <button onClick={() => handleRemoveFromCart(index)} className="remove-button">Remover</button>
+                    </li>
+                  ))}
+                </ul>
+                <div className="total-price">
+                  <strong>Total: R$ {totalPrice.toFixed(2)}</strong>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
