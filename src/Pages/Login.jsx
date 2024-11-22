@@ -36,7 +36,7 @@ export function Login() {
       if (response.ok) {
         //caso de  tudo certo
         alert("Login realizado com sucesso!");
-        navigate("/catalogo"); // redireciona para tela de cataalogo
+        navigate("/catalogo");
       } else {
         alert(data.message || "Erro no login. Verifique suas credenciais.");
       }
