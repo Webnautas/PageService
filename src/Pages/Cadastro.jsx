@@ -10,11 +10,6 @@ export function Cadastro() {
 
   const navigate = useNavigate(); 
 
-  const isSenhaValida = (senha) => {
-    const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-    return regex.test(senha);
-  };
-
   const formatCpf = (value) => {
     return value
       .replace(/\D/g, "")
@@ -37,7 +32,6 @@ export function Cadastro() {
       return;
     }
     
-
     const cliente = { nome, cpf, senha };
 
     try {
@@ -51,7 +45,7 @@ export function Cadastro() {
 
       if (response.ok) {
         alert("Cadastro realizado com sucesso!");
-        navigate("/Login"); 
+        navigate("/login"); 
       } else {
         const errorData = await response.json();
         alert("Erro ao cadastrar: " + errorData.erro);
@@ -62,15 +56,15 @@ export function Cadastro() {
     }
   };
 
+ 
+
   return (
     <div className="background">
       <div className="background-login">
         <h2 className="titulo">Create Account</h2>
         <div className="text-inputs">
           <div className="input-field">
-            <label htmlFor="nome" className="label-text">
-              Nome
-            </label>
+            <label htmlFor="nome" className="label-text">Nome</label>
             <input
               id="nome"
               className="input-text"
@@ -82,9 +76,7 @@ export function Cadastro() {
           </div>
 
           <div className="input-field">
-            <label htmlFor="cpf" className="label-text">
-              CPF
-            </label>
+            <label htmlFor="cpf" className="label-text">CPF</label>
             <input
               id="cpf"
               className="input-text"
@@ -96,9 +88,7 @@ export function Cadastro() {
           </div>
 
           <div className="input-field">
-            <label htmlFor="senha" className="label-text">
-              Senha
-            </label>
+            <label htmlFor="senha" className="label-text">Senha</label>
             <input
               id="senha"
               className="input-text"
@@ -110,9 +100,7 @@ export function Cadastro() {
           </div>
 
           <div className="input-field">
-            <label htmlFor="confirmarSenha" className="label-text">
-              Confirmar Senha
-            </label>
+            <label htmlFor="confirmarSenha" className="label-text">Confirmar Senha</label>
             <input
               id="confirmarSenha"
               className="input-text"

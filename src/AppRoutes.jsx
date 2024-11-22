@@ -7,10 +7,10 @@ import { Pedido } from "./Pages/Pedido";
 export function AppRoutes() {
   return (
     <Router>
-      <Routes>
+     <Routes>
         <Route path="/catalogo" element={<Catalogo />} />
         <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} /> 
         <Route path="/pedido" element={<Pedido />} />
       </Routes>
     </Router>
