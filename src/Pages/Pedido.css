@@ -1,0 +1,122 @@
+.pedido-container {
+    position: relative;
+    width: 100vh;
+    border-radius: 50px;
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background: #AFAFAF;
+    box-sizing: border-box;
+    margin-top: 130px;
+    margin-bottom: 20px;
+  }
+  
+
+  
+  .payment-info {
+    margin: 20px 0;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+  }
+  
+  .pix-title {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 36px;
+    margin: 20px 0;
+    color: #000000;
+  }
+  
+  .retangulo1 {
+    width: 100%;
+    max-width: 746px;
+    margin: 20px auto;
+    background: #ECE6F0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .pix-code {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Para manter a formatação */
+  }
+  
+  .order-info {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 24px;
+    margin: 40px 0;
+    text-align: center;
+    color: #474747;
+  }
+  
+  .retangulo2 {
+    width: 100%;
+    max-width: 746px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ECE6F0;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    box-sizing: border-box;
+  }
+  
+  .order-number {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 48px;
+    text-align: center;
+    color: #000000;
+    margin: 20px 0;
+  }
+  
+  .itens-pedido {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    background: #FFF;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+  }
+  
+  .itens-pedido h2 {
+    font-family: 'Roboto';
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .itens-pedido ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .itens-pedido .item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .itens-pedido .total {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  .itens-pedido p {
+    font-family: 'Roboto';
+    font-size: 18px;
+    text-align: center;
+  }
+  

@@ -1,0 +1,10 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0px;
+}
+body {
+  overflow-x: hidden;
+}
+li {
+  list-style: none;
+}
