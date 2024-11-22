@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Cadastro.css";
 
 export function Cadastro() {
@@ -7,11 +8,35 @@ export function Cadastro() {
   const [senha, setSenha] = useState("");
   const [confirmarSenha, setConfirmarSenha] = useState("");
 
+  const navigate = useNavigate(); 
+
+  const isSenhaValida = (senha) => {
+    const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return regex.test(senha);
+  };
+
+  const formatCpf = (value) => {
+    return value
+      .replace(/\D/g, "")
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+      .slice(0, 14);
+  };
+
   const handleCadastro = async () => {
     if (senha !== confirmarSenha) {
       alert("As senhas não conferem!");
       return;
     }
+
+    if (!isSenhaValida(senha)) {
+      alert(
+        "A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, um número e um caractere especial."
+      );
+      return;
+    }
+    
 
     const cliente = { nome, cpf, senha };
 
@@ -25,9 +50,8 @@ export function Cadastro() {
       });
 
       if (response.ok) {
-        const data = await response.json();
         alert("Cadastro realizado com sucesso!");
-        console.log(data);
+        navigate("/Login"); 
       } else {
         const errorData = await response.json();
         alert("Erro ao cadastrar: " + errorData.erro);
@@ -37,6 +61,7 @@ export function Cadastro() {
       alert("Erro ao conectar com a API.");
     }
   };
+
   return (
     <div className="background">
       <div className="background-login">
@@ -66,7 +91,7 @@ export function Cadastro() {
               type="text"
               placeholder="Digite seu CPF"
               value={cpf}
-              onChange={(e) => setCpf(e.target.value)}
+              onChange={(e) => setCpf(formatCpf(e.target.value))}
             />
           </div>
 
