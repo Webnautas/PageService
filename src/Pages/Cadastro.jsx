@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
 import "./Cadastro.css";
 
 export function Cadastro() {
@@ -10,28 +10,12 @@ export function Cadastro() {
 
   const navigate = useNavigate(); 
 
-  const formatCpf = (value) => {
-    return value
-      .replace(/\D/g, "")
-      .replace(/(\d{3})(\d)/, "$1.$2")
-      .replace(/(\d{3})(\d)/, "$1.$2")
-      .replace(/(\d{3})(\d{1,2})$/, "$1-$2")
-      .slice(0, 14);
-  };
-
   const handleCadastro = async () => {
     if (senha !== confirmarSenha) {
       alert("As senhas não conferem!");
       return;
     }
 
-    if (!isSenhaValida(senha)) {
-      alert(
-        "A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, um número e um caractere especial."
-      );
-      return;
-    }
-    
     const cliente = { nome, cpf, senha };
 
     try {
@@ -56,7 +40,14 @@ export function Cadastro() {
     }
   };
 
- 
+  const formatCpf = (value) => {
+    return value
+      .replace(/\D/g, "") 
+      .replace(/(\d{3})(\d)/, "$1.$2") 
+      .replace(/(\d{3})(\d)/, "$1.$2")
+      .replace(/(\d{3})(\d{1,2})$/, "$1-$2") 
+      .slice(0, 14); 
+  };
 
   return (
     <div className="background">
@@ -64,7 +55,9 @@ export function Cadastro() {
         <h2 className="titulo">Create Account</h2>
         <div className="text-inputs">
           <div className="input-field">
-            <label htmlFor="nome" className="label-text">Nome</label>
+            <label htmlFor="nome" className="label-text">
+              Nome
+            </label>
             <input
               id="nome"
               className="input-text"
@@ -73,10 +66,13 @@ export function Cadastro() {
               value={nome}
               onChange={(e) => setNome(e.target.value)}
             />
+            
           </div>
 
           <div className="input-field">
-            <label htmlFor="cpf" className="label-text">CPF</label>
+            <label htmlFor="cpf" className="label-text">
+              CPF
+            </label>
             <input
               id="cpf"
               className="input-text"
@@ -85,22 +81,28 @@ export function Cadastro() {
               value={cpf}
               onChange={(e) => setCpf(formatCpf(e.target.value))}
             />
+            <span className="supporting-text">Digite Apenas nos numeros sem (.-)</span>
           </div>
 
           <div className="input-field">
-            <label htmlFor="senha" className="label-text">Senha</label>
+            <label htmlFor="senha" className="label-text">
+              Senha
+            </label>
             <input
               id="senha"
               className="input-text"
               type="password"
-              placeholder="Digite sua senha"
+              placeholder="Digite sua Senha"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
             />
+            <span className="supporting-text">Senha Precisa ter 6 digitos 1 Digito Especial</span>
           </div>
 
           <div className="input-field">
-            <label htmlFor="confirmarSenha" className="label-text">Confirmar Senha</label>
+            <label htmlFor="confirmarSenha" className="label-text">
+              Confirmar Senha
+            </label>
             <input
               id="confirmarSenha"
               className="input-text"
@@ -109,6 +111,7 @@ export function Cadastro() {
               value={confirmarSenha}
               onChange={(e) => setConfirmarSenha(e.target.value)}
             />
+            <span className="supporting-text">As senhas precisam estar iguais!</span>
           </div>
         </div>
 

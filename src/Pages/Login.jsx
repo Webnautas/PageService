@@ -61,7 +61,7 @@ export function Login() {
               id="username"
               placeholder="Digite seu usuário"
               value={username}
-              onChange={(e) => setUsername(e.target.value)} // Atualiza o estado do nome de usuário
+              onChange={(e) => setUsername(e.target.value)} 
             />
             <span className="supporting-text">example1997</span>
           </div>
@@ -76,7 +76,7 @@ export function Login() {
               className="input-text"
               placeholder="Digite sua senha"
               value={password}
-              onChange={(e) => setPassword(e.target.value)} // Atualiza o estado da senha
+              onChange={(e) => setPassword(e.target.value)} 
             />
             <span className="supporting-text">Verifique o Capslock</span>
           </div>
