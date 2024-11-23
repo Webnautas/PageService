@@ -14,9 +14,9 @@ export function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  //Função chamada para enviar o formulario para a API
+ 
   const logar = async (e) => {
-    e.preventDefault(); //esvita que a pagina recarregue
+    e.preventDefault(); 
 
     console.log({ username, password });
 
@@ -34,7 +34,7 @@ export function Login() {
 
       const data = await response.json();
       if (response.ok) {
-        //caso de  tudo certo
+        
         alert("Login realizado com sucesso!");
         navigate("/catalogo");
       } else {

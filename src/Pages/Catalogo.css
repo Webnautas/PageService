@@ -140,11 +140,11 @@ button {
   padding: 2em;
   width: 80%;
   max-width: 500px;
-  max-height: 80vh; /* Limita a altura do modal para permitir o scroll */
+  max-height: 80vh; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
-  overflow-y: auto; /* Habilita o scroll vertical */
+  overflow-y: auto; 
 }
 
 .close-modal {

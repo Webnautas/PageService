@@ -7,7 +7,7 @@
     padding: 20px;
     background: #AFAFAF;
     box-sizing: border-box;
-    margin-top: 130px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
   
@@ -17,16 +17,18 @@
     margin: 20px 0;
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 24px;
+    font-size: 30px;
     color: #000000;
+    text-align: center;
   }
   
   .pix-title {
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 36px;
-    margin: 20px 0;
+    font-size: 24px;
+    margin: 60px 0px 0px 0px;
     color: #000000;
+    text-align: center;
   }
   
   .retangulo1 {
@@ -47,23 +49,21 @@
     text-align: center;
     color: #000000;
     word-wrap: break-word;
-    white-space: pre-wrap; /* Para manter a formatação */
+    white-space: pre-wrap; 
   }
   
   .order-info {
     font-family: 'Roboto';
     font-weight: 500;
     font-size: 24px;
-    margin: 40px 0;
+    margin: 50px 0px 0px 0px;
     text-align: center;
-    color: #474747;
+    color: black;
   }
   
   .retangulo2 {
-    width: 100%;
-    max-width: 746px;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 35px;
+    padding: 5px;
     background: #ECE6F0;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     box-sizing: border-box;
@@ -75,7 +75,7 @@
     font-size: 48px;
     text-align: center;
     color: #000000;
-    margin: 20px 0;
+    margin: 15px 0px 15px 0px;
   }
   
   .itens-pedido {
@@ -120,3 +120,22 @@
     text-align: center;
   }
   
+  #sup-ped {
+    text-align: center;
+    color: #474747;
+    font-family: 'Roboto';
+    font-size: 17px;
+    
+    margin-left: 30%;
+  }
+
+  .qrcode {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .qrcode img{
+    margin: 15px;
+
+  }

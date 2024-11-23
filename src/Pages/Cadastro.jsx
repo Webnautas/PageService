@@ -52,7 +52,7 @@ export function Cadastro() {
   return (
     <div className="background">
       <div className="background-login">
-        <h2 className="titulo">Create Account</h2>
+        <h2 className="titulo">Cadastre-se</h2>
         <div className="text-inputs">
           <div className="input-field">
             <label htmlFor="nome" className="label-text">
