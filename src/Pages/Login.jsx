@@ -98,7 +98,7 @@ export function Login() {
               console.log("Login Failed");
             }}
           />
-          ;
+          
         </button>
 
         <button className="register-button" type="button" onClick={handleClick}>

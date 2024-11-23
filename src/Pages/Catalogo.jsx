@@ -1,13 +1,15 @@
-import { useState } from "react"; 
+import { useState } from "react";
 import "./Catalogo.css";
 import Produto from "../Componentes/Produto";
 import ShopCart from "../assets/ShopCart.svg";
 import search from "../assets/search.svg";
+import { useNavigate } from "react-router-dom";
 
 export function Catalogo() {
-  const [cartCount, setCartCount] = useState(0);
   const [cartItems, setCartItems] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleAddToCart = (item) => {
     setCartItems([...cartItems, item]);
@@ -23,6 +25,15 @@ export function Catalogo() {
 
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
+  };
+
+  const handleFinalizeOrder = () => {
+    if (cartItems.length > 0) {
+      localStorage.setItem("carrinho", JSON.stringify(cartItems));
+      navigate("/pedido"); 
+    } else {
+      alert("Seu carrinho está vazio!");
+    }
   };
 
   const totalPrice = cartItems.reduce((total, item) => total + item.price, 0);
@@ -49,24 +60,19 @@ export function Catalogo() {
       </main>
       <footer>
         <div className="footer_content">
-          <div className="footer_contacts">
-            <h3>Logo</h3>
-            <p>Frase da empresa</p>
-            <a href="#">Insta</a>
-            <a href="#">Face</a>
-            <a href="#">Whats</a>
-          </div>
-          <div className="footer_list">
-            <h3>Desenvolvido pelo Webnautas</h3>
-            <a href="https://github.com/Webnautas">GitHub</a>
-          </div>
+          <h3>Desenvolvido pelo Webnautas</h3>
+          <a href="https://github.com/Webnautas">GitHub</a>
         </div>
       </footer>
+
+      
       {isCartOpen && (
         <div className="modal">
           <div className="modal-content">
             <h2>Carrinho</h2>
-            <button onClick={toggleCart} className="close-modal">X</button>
+            <button onClick={toggleCart} className="close-modal">
+              X
+            </button>
             {cartItems.length === 0 ? (
               <p>Seu carrinho está vazio.</p>
             ) : (
@@ -75,13 +81,21 @@ export function Catalogo() {
                   {cartItems.map((item, index) => (
                     <li key={index} className="cart-item">
                       {item.name} - R$ {item.price.toFixed(2)}
-                      <button onClick={() => handleRemoveFromCart(index)} className="remove-button">Remover</button>
+                      <button
+                        onClick={() => handleRemoveFromCart(index)}
+                        className="remove-button"
+                      >
+                        Remover
+                      </button>
                     </li>
                   ))}
                 </ul>
                 <div className="total-price">
                   <strong>Total: R$ {totalPrice.toFixed(2)}</strong>
                 </div>
+                <button onClick={handleFinalizeOrder} className="finalize-button">
+                  Finalizar Pedido
+                </button>
               </>
             )}
           </div>

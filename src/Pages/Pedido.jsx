@@ -1,37 +1,19 @@
-import { useState, useEffect } from "react"; // Importar useEffect
+import { useState, useEffect } from "react";
 import "./Pedido.css";
 
 export function Pedido() {
-  // Estado para armazenar os dados dos itens do pedido
   const [itensPedido, setItensPedido] = useState([]);
   const [total, setTotal] = useState(0);
-  // Simulando a requisição ao back-end
+
   useEffect(() => {
-    // Simulação de dados do back-end
-    const fetchData = async () => {
-      const dadosDoBackEnd = {
-        itens: [
-          { nome: "Item 1", preco: 10.0 },
-          { nome: "Item 2", preco: 20.0 },
-          { nome: "Item 3", preco: 15.0 },
-        ],
-        total: 45.0,
-      };
-
-      // Atualizando o estado com os dados recebidos
-      setItensPedido(dadosDoBackEnd.itens);
-      setTotal(dadosDoBackEnd.total);
-    };
-
-    fetchData();
+    const carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+    setItensPedido(carrinho);
+    setTotal(carrinho.reduce((acc, item) => acc + item.price, 0));
   }, []);
 
   return (
     <div className="pedido-container">
-      <p className="payment-info">
-        Está quase pronto =) Realize seu pagamento!
-      </p>
-
+      <p className="payment-info">Está quase pronto =) Realize seu pagamento!</p>
       <div className="pix-title">PIX COPIA E COLA</div>
       <div className="retangulo1">
         <div className="pix-code">
@@ -39,26 +21,22 @@ export function Pedido() {
           do Recebedor6010Nome do Banco62160512ABC123456789630489E7
         </div>
       </div>
-
-      <div className="order-info">
-        Informe o seu número de pedido no caixa :)
-      </div>
+      <div className="order-info">Informe o seu número de pedido no caixa :)</div>
       <div className="retangulo2">
         <div className="order-number">#123456</div>
       </div>
-
       <div className="itens-pedido">
         <h2>Itens do Pedido</h2>
         <ul>
           {itensPedido.length > 0 ? (
             itensPedido.map((item, index) => (
               <li key={index} className="item">
-                <span>{item.nome}</span>
-                <span>R$ {item.preco.toFixed(2)}</span>
+                <span>{item.name}</span>
+                <span>R$ {item.price.toFixed(2)}</span>
               </li>
             ))
           ) : (
-            <p>Carregando itens...</p>
+            <p>Seu carrinho está vazio.</p>
           )}
         </ul>
         <div className="total">
@@ -70,4 +48,4 @@ export function Pedido() {
   );
 }
 
-export default Pedido;
+

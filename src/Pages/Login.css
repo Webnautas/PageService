@@ -72,7 +72,6 @@ body.login {
 }
 
 .login-button,
-.google-login,
 .register-button {
   width: 100%;
   padding: 10px;
@@ -94,11 +93,13 @@ body.login {
 .google-login {
   background-color: white;
   color: #000;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 5px;
   margin-bottom: 25px;
+  padding: 0%;
 }
 .google-login:hover {
   background-color: #89c9f3;
