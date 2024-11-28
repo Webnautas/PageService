@@ -207,3 +207,10 @@ button {
   background: #fff;
   padding-top: 10px;
 }
+.search-input {
+  padding: 0.5em;
+  border: 1px solid var(--cinza3);
+  border-radius: 4px;
+  margin-left: 10px;
+  width: 200px;
+}
