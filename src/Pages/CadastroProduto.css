@@ -1,0 +1,116 @@
+.background-produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .background-cadastro {
+    width: 350px;
+    background: #e6e0e9;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px;
+  }
+  
+  .titulo {
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .text-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .input-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label-text {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .input-text {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .cadastrar {
+    margin-top: 20px;
+  }
+  
+  .cadastrar-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cadastrar-button:hover {
+    background-color: #333;
+  }
+  
+  .lista-produtos {
+    width: 80%;
+  }
+  
+  .produto-lista {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .produto-item {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .botoes {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .editar-button,
+  .excluir-button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .editar-button {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .excluir-button {
+    background-color: #ff4d4d;
+    color: #fff;
+  }
+  
+  .editar-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .excluir-button:hover {
+    background-color: #cc0000;
+  }
+  
